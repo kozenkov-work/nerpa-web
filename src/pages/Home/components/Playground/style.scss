@@ -1,0 +1,10 @@
+.playground {
+  position: relative;
+  overflow: auto;
+  background-color: lightgray;
+  flex: 1;
+
+  .block {
+    position: absolute;
+  }
+}

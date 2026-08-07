@@ -1,0 +1,24 @@
+.panel {
+  width: 200px;
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+
+  &>.content {
+    flex: 1;
+
+    &>.label {
+      font-size: 18px;
+      font-weight: 500;
+      text-align: center;
+      padding: 6px 0;
+      background-color: darkred;
+    }
+  }
+
+  .handle {
+    width: 5px;
+    background-color: purple;
+    cursor: col-resize;
+  }
+}

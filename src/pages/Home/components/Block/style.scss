@@ -1,0 +1,66 @@
+.block {
+  background-color: darkred;
+  width: max-content;
+  padding: 6px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 4px white;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+
+  &:hover,
+  .connection:hover {
+    transform: scale(1.05);
+  }
+
+  .label {
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    .content {
+      flex: 1;
+    }
+
+    .connections {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+
+      .connection {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        gap: 2px;
+
+        .circle {
+          width: 8px;
+          height: 8px;
+          border-radius: 99px;
+          border: 2px solid darkred;
+        }
+
+        .name {
+          font-size: 10px;
+          line-height: 10px;
+        }
+      }
+
+      &.inputs .connection {
+        left: -11px;
+      }
+
+      &.outputs .connection {
+        right: -11px;
+      }
+    }
+  }
+}
