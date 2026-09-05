@@ -6,5 +6,13 @@
 
   .block {
     position: absolute;
+    z-index: 2000;
+  }
+
+  .wire {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
   }
 }

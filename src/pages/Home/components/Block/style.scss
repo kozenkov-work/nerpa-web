@@ -1,6 +1,7 @@
 .block {
   background-color: darkred;
   width: max-content;
+  max-width: 150px;
   padding: 6px;
   border-radius: 6px;
   box-shadow: 1px 1px 4px white;
@@ -19,11 +20,13 @@
   .label {
     font-weight: 500;
     font-size: 14px;
+    text-align: center;
   }
 
   .container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     width: 100%;
 
     .content {
@@ -48,18 +51,24 @@
           border: 2px solid darkred;
         }
 
-        .name {
+        .label {
           font-size: 10px;
           line-height: 10px;
         }
       }
 
-      &.inputs .connection {
-        left: -11px;
+      &.inputs {
+        align-items: flex-start;
+        .connection {
+          left: -10px;
+        }
       }
 
-      &.outputs .connection {
-        right: -11px;
+      &.outputs {
+        align-items: flex-end;
+        .connection {
+          right: -11px;
+        }
       }
     }
   }
